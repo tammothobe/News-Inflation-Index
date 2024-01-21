@@ -1,6 +1,8 @@
 #--------------------------------------------------------
 # Name  : Consolidation NYT
-# Desc. : 
+# Desc. : The script consolidates the different .csv
+#         from every year in the time frame into one
+#         single file.
 # Author: Tammo Thobe
 # Course: Data Analysis Lab
 # Date  : 02.12.2023
@@ -8,6 +10,7 @@
 
 rm(list = ls())
 
+# Data
 articles_2010 <- read.csv("NYT_2010.csv")
 articles_2011 <- read.csv("NYT_2011.csv")
 articles_2012 <- read.csv("NYT_2012.csv")
@@ -23,8 +26,7 @@ articles_2021 <- read.csv("NYT_2021.csv")
 articles_2022 <- read.csv("NYT_2022.csv")
 articles_2023 <- read.csv("NYT_2023.csv")
 
-# NYT 
-
+# NYT data frame
 NYT_inflation <- rbind(articles_2010, articles_2011, articles_2012, articles_2013, articles_2014,
                     articles_2015, articles_2016, articles_2017, articles_2018, articles_2019, 
                     articles_2020, articles_2021, articles_2022, articles_2023)

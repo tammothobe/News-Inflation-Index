@@ -1,11 +1,13 @@
 #--------------------------------------------------------
 # Name  : Web Scraping NYT per year
-# Desc. : Scraping Article Information using the New 
-#         York Times API and extracting article bodies 
-#         from the respective URLs.
+# Desc. : Scraping Article Information in regards to
+#         inflation, using the New York Times API and 
+#         extracting article bodies from the respective
+#         URLs.
 #         Since a for loop ran into errors, the scraping
 #         is done on a yearly basis, which in turn is
 #         divided into three parts and then merged.
+#         Articles were scraped between 2010 and 2023.
 # Author: Tammo Thobe
 # Course: Data Analysis Lab
 # Date  : 02.12.2023
@@ -14,12 +16,30 @@
 rm(list = ls())
 
 # Libraries
-library(jsonlite)
-library(dplyr)
-library(httr)
-library(rvest)
-library(dplyr)      
-library(stringr) 
+if(!require(dplyr)){
+  install.packages("dplyr")
+  library(dplyr)
+}
+
+if(!require(jsonlite)){
+  install.packages("jsonlite")
+  library(jsonlite)
+}
+
+if(!require(httr)){
+  install.packages("httr")
+  library(httr)
+}
+
+if(!require(rvest)){
+  install.packages("rvest")
+  library(rvest)
+}
+
+if(!require(stringr)){
+  install.packages("stringr")
+  library(stringr)
+}
 
 
 #Function to extract Article body from NYT

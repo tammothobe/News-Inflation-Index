@@ -28,6 +28,11 @@ if(!require(tseries)){
   library(tseries)
 }
 
+if(!require(lmtest)){
+  install.packages("lmtest")
+  library(lmtest)
+}
+
 # Data
 Index <- read.csv("Inflation Sentiment Index.csv")
 

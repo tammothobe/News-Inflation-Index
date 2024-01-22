@@ -33,6 +33,11 @@ if(!require(lmtest)){
   library(lmtest)
 }
 
+if(!require(sandwich)){
+  install.packages("sandwich")
+  library(sandwich)
+}
+
 # Data
 Index <- read.csv("Inflation Sentiment Index.csv")
 
